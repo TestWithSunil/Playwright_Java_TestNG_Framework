@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import com.qa.demowebshop.base.BaseTest;
 import com.qa.demowebshop.constants.Appconstants;
 
-public class LoginPageTest extends BaseTest{
+public class TC02_LoginPageTest extends BaseTest{
 	
 	@Test(priority=1)
 	public void LoginPageNavigationTest() {

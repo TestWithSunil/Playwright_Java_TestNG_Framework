@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Open Cart Test Regression PW Suite/Demo WebShop Parallel Suite" thread-count="1" parallel="tests" verbose="4">
+
+	<listeners>
+		<listener
+			class-name="com.qa.demowebshop.listener.ExtentReportListener" />
+
+	</listeners>
+
+	<test name="Open Cart HomePage Test">
+	<parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="com.qa.demowebshop.tests.TC01_HomePageTest" />
+		</classes>
+	</test>
+
+	<test name="Open Cart LoginPage Test">
+	<parameter name="browser" value="edge"/>
+		<classes>
+			<class name="com.qa.demowebshop.tests.TC02_LoginPageTest" />
+		</classes>
+	</test>
+
+
+
+
+
+</suite>

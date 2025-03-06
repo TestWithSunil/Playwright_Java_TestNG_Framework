@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Open Cart Test Regression PW Suite/Demo WebShop Parallel Suite]" guice-stage="DEVELOPMENT" verbose="4">
+  <listeners>
+    <listener class-name="com.qa.demowebshop.listener.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="5" name="Open Cart HomePage Test(failed)" verbose="4">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.qa.demowebshop.tests.TC01_HomePageTest">
+        <methods>
+          <include name="getHomePageTittleTest"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.qa.demowebshop.tests.TC01_HomePageTest -->
+    </classes>
+  </test> <!-- Open Cart HomePage Test(failed) -->
+</suite> <!-- Failed suite [Open Cart Test Regression PW Suite/Demo WebShop Parallel Suite] -->

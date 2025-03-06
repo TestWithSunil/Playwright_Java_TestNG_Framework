@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.demowebshop.tests.LoginPageTest">
+      <class name="com.qa.demowebshop.tests.TC02_LoginPageTest">
         <methods>
+          <include name="loginTest"/>
+          <include name="forgotPWDlinkExistTest"/>
           <include name="LoginPageNavigationTest"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.qa.demowebshop.tests.LoginPageTest -->
+      </class> <!-- com.qa.demowebshop.tests.TC02_LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

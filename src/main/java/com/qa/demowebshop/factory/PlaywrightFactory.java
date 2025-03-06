@@ -93,17 +93,27 @@ public class PlaywrightFactory {
         return prop;
     }
     
-    public static String takeScreenshot() {
+//    public static String takeScreenshot() {
+//        try {
+//            String path = System.getProperty("user.dir") + "/screenshot/" + System.currentTimeMillis() + ".png";
+//            getPage().screenshot(new Page.ScreenshotOptions()
+//                    .setPath(Paths.get(path))
+//                    .setFullPage(true));
+//            return path;
+//        } catch (Exception e) {
+//            System.err.println("Failed to take screenshot: " + e.getMessage());
+//            e.printStackTrace();
+//            return null;
+//        }
+//    }
+    public static void takeScreenshot(String screenshotPath) {
         try {
-            String path = System.getProperty("user.dir") + "/screenshot/" + System.currentTimeMillis() + ".png";
             getPage().screenshot(new Page.ScreenshotOptions()
-                    .setPath(Paths.get(path))
+                    .setPath(Paths.get(screenshotPath))
                     .setFullPage(true));
-            return path;
         } catch (Exception e) {
             System.err.println("Failed to take screenshot: " + e.getMessage());
             e.printStackTrace();
-            return null;
         }
     }
 
