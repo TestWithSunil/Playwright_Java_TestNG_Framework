@@ -4,16 +4,16 @@
   <listeners>
     <listener class-name="com.qa.demowebshop.listener.ExtentReportListener"/>
   </listeners>
-  <test thread-count="5" name="Open Cart HomePage Test(failed)" verbose="4">
+  <test thread-count="5" name="Open Cart LoginPage Test(failed)" verbose="4">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.qa.demowebshop.tests.TC01_HomePageTest">
+      <class name="com.qa.demowebshop.tests.TC02_LoginPageTest">
         <methods>
-          <include name="getHomePageTittleTest"/>
+          <include name="appLoginTest"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.qa.demowebshop.tests.TC01_HomePageTest -->
+      </class> <!-- com.qa.demowebshop.tests.TC02_LoginPageTest -->
     </classes>
-  </test> <!-- Open Cart HomePage Test(failed) -->
+  </test> <!-- Open Cart LoginPage Test(failed) -->
 </suite> <!-- Failed suite [Open Cart Test Regression PW Suite] -->

@@ -1,4 +1,4 @@
-package com.qa.demowebshop.ExcelUtils;
+package com.qa.demowebshop.Utils;
 
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;

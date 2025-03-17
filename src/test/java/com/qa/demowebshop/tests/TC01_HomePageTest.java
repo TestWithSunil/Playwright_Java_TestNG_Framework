@@ -3,7 +3,7 @@ package com.qa.demowebshop.tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.qa.demowebshop.ExcelUtils.ExcelReader;
+import com.qa.demowebshop.Utils.ExcelReader;
 import com.qa.demowebshop.base.BaseTest;
 import com.qa.demowebshop.constants.Appconstants;
 
