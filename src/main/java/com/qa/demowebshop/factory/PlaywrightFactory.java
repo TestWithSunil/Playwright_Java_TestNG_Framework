@@ -4,6 +4,7 @@ import com.microsoft.playwright.*;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.Properties;
 
 public class PlaywrightFactory {
@@ -14,8 +15,11 @@ public class PlaywrightFactory {
     private Properties prop;
 
     public Page initBrowser(Properties prop) {
-        String browserName = prop.getProperty("browser").trim();
-        System.out.println("Browser name is: " + browserName);
+        String browserName = prop.getProperty("browser", "chrome").trim();
+        boolean isHeadless = Boolean.parseBoolean(prop.getProperty("headless", "true").trim()); // Default: true
+        String url = prop.getProperty("url").trim();
+
+        System.out.println("Browser: " + browserName + " | Headless Mode: " + isHeadless);
 
         try {
             Playwright playwright = Playwright.create();
@@ -23,31 +27,34 @@ public class PlaywrightFactory {
 
             Browser browser;
             switch (browserName.toLowerCase()) {
-                case "chrome":
-                    browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
-                            .setChannel("chrome")
-                            .setHeadless(false));
-                    break;
+            case "chrome":
+            	browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
+            	        .setChannel("chrome")
+            	        .setHeadless(isHeadless)
+            	        .setArgs(isHeadless ? List.of("--headless=new") : List.of("--start-maximized"))); 
+
+
+                break;
 
                 case "edge":
                     browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
                             .setChannel("msedge")
-                            .setHeadless(false));
+                            .setHeadless(isHeadless));
                     break;
 
                 case "firefox":
                     browser = playwright.firefox().launch(new BrowserType.LaunchOptions()
-                            .setHeadless(false));
+                            .setHeadless(isHeadless));
                     break;
 
                 case "safari":
                     browser = playwright.webkit().launch(new BrowserType.LaunchOptions()
-                            .setHeadless(false));
+                            .setHeadless(isHeadless));
                     break;
 
                 case "chromium":
                     browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
-                            .setHeadless(false));
+                            .setHeadless(isHeadless));
                     break;
 
                 default:
@@ -60,7 +67,7 @@ public class PlaywrightFactory {
             Page page = browserContext.newPage();
             threadLocalPage.set(page);
 
-            page.navigate(prop.getProperty("url").trim());
+            page.navigate(url);
             return page;
 
         } catch (Exception e) {
@@ -75,11 +82,16 @@ public class PlaywrightFactory {
     }
 
     public void cleanup() {
-        if (threadLocalBrowser.get() != null) {
-            threadLocalBrowser.get().close();
-        }
-        if (threadLocalPlaywright.get() != null) {
-            threadLocalPlaywright.get().close();
+        try {
+            if (threadLocalBrowser.get() != null) {
+                threadLocalBrowser.get().close();
+            }
+            if (threadLocalPlaywright.get() != null) {
+                threadLocalPlaywright.get().close();
+            }
+        } catch (Exception e) {
+            System.err.println("Error during cleanup: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 
@@ -88,24 +100,12 @@ public class PlaywrightFactory {
             prop = new Properties();
             prop.load(ip);
         } catch (IOException e) {
+            System.err.println("Failed to load properties file: " + e.getMessage());
             e.printStackTrace();
         }
         return prop;
     }
-    
-//    public static String takeScreenshot() {
-//        try {
-//            String path = System.getProperty("user.dir") + "/screenshot/" + System.currentTimeMillis() + ".png";
-//            getPage().screenshot(new Page.ScreenshotOptions()
-//                    .setPath(Paths.get(path))
-//                    .setFullPage(true));
-//            return path;
-//        } catch (Exception e) {
-//            System.err.println("Failed to take screenshot: " + e.getMessage());
-//            e.printStackTrace();
-//            return null;
-//        }
-//    }
+
     public static void takeScreenshot(String screenshotPath) {
         try {
             getPage().screenshot(new Page.ScreenshotOptions()
@@ -116,6 +116,4 @@ public class PlaywrightFactory {
             e.printStackTrace();
         }
     }
-
-    
 }

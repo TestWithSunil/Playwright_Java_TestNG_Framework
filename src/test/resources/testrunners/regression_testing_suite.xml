@@ -10,7 +10,7 @@
 	</listeners>
 
 	<test name="Open Cart HomePage Test">
-	<parameter name="browser" value=""/>
+	<parameter name="browser" value="chrome"/>
 		<classes>
 			<class name="com.qa.demowebshop.tests.TC01_HomePageTest" />
 		</classes>
@@ -18,7 +18,7 @@
 	
 	
 	<test name="Open Cart LoginPage Test">
-	<parameter name="browser" value=""/>
+	<parameter name="browser" value="chrome"/>
 		<classes>
 			<class name="com.qa.demowebshop.tests.TC02_LoginPageTest" />
 		</classes>
