@@ -5,7 +5,7 @@
     <listener class-name="com.qa.demowebshop.listener.ExtentReportListener"/>
   </listeners>
   <test thread-count="5" name="Open Cart LoginPage Test(failed)" verbose="4">
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value=""/>
     <classes>
       <class name="com.qa.demowebshop.tests.TC02_LoginPageTest">
         <methods>

@@ -2,62 +2,62 @@
 <testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-20T18:21:25 IST" name="Open Cart Test Regression PW Suite" finished-at="2025-03-20T18:21:37 IST" duration-ms="12326">
+  <suite started-at="2025-03-21T10:06:25 IST" name="Open Cart Test Regression PW Suite" finished-at="2025-03-21T10:06:38 IST" duration-ms="13376">
     <groups>
     </groups>
-    <test started-at="2025-03-20T18:21:25 IST" name="Open Cart HomePage Test" finished-at="2025-03-20T18:21:33 IST" duration-ms="7923">
+    <test started-at="2025-03-21T10:06:25 IST" name="Open Cart HomePage Test" finished-at="2025-03-21T10:06:33 IST" duration-ms="8142">
       <class name="com.qa.demowebshop.tests.TC01_HomePageTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.demowebshop.tests.TC01_HomePageTest@2f2bf0e2]" started-at="2025-03-20T18:21:25 IST" name="setup" finished-at="2025-03-20T18:21:31 IST" duration-ms="6365" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.demowebshop.tests.TC01_HomePageTest@2f2bf0e2]" started-at="2025-03-21T10:06:25 IST" name="setup" finished-at="2025-03-21T10:06:32 IST" duration-ms="6652" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="getHomePageTittleTest()[pri:0, instance:com.qa.demowebshop.tests.TC01_HomePageTest@2f2bf0e2]" started-at="2025-03-20T18:21:31 IST" name="getHomePageTittleTest" finished-at="2025-03-20T18:21:31 IST" duration-ms="38" status="PASS">
+        <test-method signature="getHomePageTittleTest()[pri:0, instance:com.qa.demowebshop.tests.TC01_HomePageTest@2f2bf0e2]" started-at="2025-03-21T10:06:32 IST" name="getHomePageTittleTest" finished-at="2025-03-21T10:06:32 IST" duration-ms="34" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getHomePageTittleTest -->
-        <test-method signature="getHomePageURLTest()[pri:0, instance:com.qa.demowebshop.tests.TC01_HomePageTest@2f2bf0e2]" started-at="2025-03-20T18:21:32 IST" name="getHomePageURLTest" finished-at="2025-03-20T18:21:32 IST" duration-ms="3" status="PASS">
+        <test-method signature="getHomePageURLTest()[pri:0, instance:com.qa.demowebshop.tests.TC01_HomePageTest@2f2bf0e2]" started-at="2025-03-21T10:06:32 IST" name="getHomePageURLTest" finished-at="2025-03-21T10:06:32 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getHomePageURLTest -->
-        <test-method signature="searchTest()[pri:0, instance:com.qa.demowebshop.tests.TC01_HomePageTest@2f2bf0e2]" started-at="2025-03-20T18:21:32 IST" name="searchTest" finished-at="2025-03-20T18:21:32 IST" duration-ms="386" status="PASS">
+        <test-method signature="searchTest()[pri:0, instance:com.qa.demowebshop.tests.TC01_HomePageTest@2f2bf0e2]" started-at="2025-03-21T10:06:32 IST" name="searchTest" finished-at="2025-03-21T10:06:33 IST" duration-ms="408" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.demowebshop.tests.TC01_HomePageTest@2f2bf0e2]" started-at="2025-03-20T18:21:33 IST" name="teardown" finished-at="2025-03-20T18:21:33 IST" duration-ms="170" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.demowebshop.tests.TC01_HomePageTest@2f2bf0e2]" started-at="2025-03-21T10:06:33 IST" name="teardown" finished-at="2025-03-21T10:06:33 IST" duration-ms="164" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.qa.demowebshop.tests.TC01_HomePageTest -->
     </test> <!-- Open Cart HomePage Test -->
-    <test started-at="2025-03-20T18:21:33 IST" name="Open Cart LoginPage Test" finished-at="2025-03-20T18:21:37 IST" duration-ms="4156">
+    <test started-at="2025-03-21T10:06:33 IST" name="Open Cart LoginPage Test" finished-at="2025-03-21T10:06:38 IST" duration-ms="5032">
       <class name="com.qa.demowebshop.tests.TC02_LoginPageTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.demowebshop.tests.TC02_LoginPageTest@5cc5b667]" started-at="2025-03-20T18:21:33 IST" name="setup" finished-at="2025-03-20T18:21:36 IST" duration-ms="2602" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.demowebshop.tests.TC02_LoginPageTest@5cc5b667]" started-at="2025-03-21T10:06:33 IST" name="setup" finished-at="2025-03-21T10:06:36 IST" duration-ms="2922" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="LoginPageNavigationTest()[pri:1, instance:com.qa.demowebshop.tests.TC02_LoginPageTest@5cc5b667]" started-at="2025-03-20T18:21:36 IST" name="LoginPageNavigationTest" finished-at="2025-03-20T18:21:36 IST" duration-ms="435" status="PASS">
+        <test-method signature="LoginPageNavigationTest()[pri:1, instance:com.qa.demowebshop.tests.TC02_LoginPageTest@5cc5b667]" started-at="2025-03-21T10:06:36 IST" name="LoginPageNavigationTest" finished-at="2025-03-21T10:06:37 IST" duration-ms="402" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginPageNavigationTest -->
-        <test-method signature="forgotPWDlinkExistTest()[pri:2, instance:com.qa.demowebshop.tests.TC02_LoginPageTest@5cc5b667]" started-at="2025-03-20T18:21:37 IST" name="forgotPWDlinkExistTest" finished-at="2025-03-20T18:21:37 IST" duration-ms="7" status="PASS">
+        <test-method signature="forgotPWDlinkExistTest()[pri:2, instance:com.qa.demowebshop.tests.TC02_LoginPageTest@5cc5b667]" started-at="2025-03-21T10:06:37 IST" name="forgotPWDlinkExistTest" finished-at="2025-03-21T10:06:37 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotPWDlinkExistTest -->
-        <test-method signature="appLoginTest()[pri:3, instance:com.qa.demowebshop.tests.TC02_LoginPageTest@5cc5b667]" started-at="2025-03-20T18:21:37 IST" name="appLoginTest" finished-at="2025-03-20T18:21:37 IST" duration-ms="417" status="FAIL">
+        <test-method signature="appLoginTest()[pri:3, instance:com.qa.demowebshop.tests.TC02_LoginPageTest@5cc5b667]" started-at="2025-03-21T10:06:37 IST" name="appLoginTest" finished-at="2025-03-21T10:06:38 IST" duration-ms="403" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -101,7 +101,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- appLoginTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.demowebshop.tests.TC02_LoginPageTest@5cc5b667]" started-at="2025-03-20T18:21:37 IST" name="teardown" finished-at="2025-03-20T18:21:37 IST" duration-ms="157" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.demowebshop.tests.TC02_LoginPageTest@5cc5b667]" started-at="2025-03-21T10:06:38 IST" name="teardown" finished-at="2025-03-21T10:06:38 IST" duration-ms="161" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
